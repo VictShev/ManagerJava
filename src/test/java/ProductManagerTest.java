@@ -20,8 +20,27 @@ public class ProductManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void searching() {
+    public void searchingFirstBookByName() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
+        Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
+
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+
+        Product[] expected = {book1};
+        Product[] actual = manager.searchBy("Prejudice");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void searchingThirdBookByName() {
         ProductRepository repository = new ProductRepository();
         ProductManager manager = new ProductManager(repository);
         Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
@@ -37,4 +56,23 @@ public class ProductManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void searchingSecondBookByName() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
+        Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
+
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+
+        Product[] expected = {book2};
+        Product[] actual = manager.searchBy("The Great Gatsby");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
