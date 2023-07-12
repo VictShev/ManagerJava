@@ -8,7 +8,7 @@ public class ProductRepositoryTest {
     public void removingExistingFirstBook() {
         ProductRepository repository = new ProductRepository();
 
-        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book1 = new Book(1, "The Sun and Her Flowers", 1300, "Rupi Kaur");
         Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
         Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
 
@@ -27,7 +27,7 @@ public class ProductRepositoryTest {
     public void removingExistingSecondBook() {
         ProductRepository repository = new ProductRepository();
 
-        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book1 = new Book(1, "The Sun and Her Flowers", 1300, "Rupi Kaur");
         Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
         Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
 
@@ -46,7 +46,7 @@ public class ProductRepositoryTest {
     public void removingExistingThirdBook() {
         ProductRepository repository = new ProductRepository();
 
-        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book1 = new Book(1, "The Sun and Her Flowers", 1300, "Rupi Kaur");
         Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
         Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
 
@@ -65,7 +65,7 @@ public class ProductRepositoryTest {
     public void removingNotExistingID() {
         ProductRepository repository = new ProductRepository();
 
-        Book book1 = new Book(1, "Pride and Prejudice", 1300, "Jane Austen");
+        Book book1 = new Book(1, "The Sun and Her Flowers", 1300, "Rupi Kaur");
         Book book2 = new Book(2, "The Great Gatsby", 1800, "F. Scott Fitzgerald");
         Book book3 = new Book(3, "Flowers for Algernon", 900, "Daniel Keyes");
 

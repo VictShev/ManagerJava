@@ -37,5 +37,7 @@ public class ProductManager {
         // или в одну строку:
         // return product.getName().contains(search);
     }
+
+
 }
 
